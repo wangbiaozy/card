@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />	
+		<meta name="format-detection" content="telephone=no" />
+		<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" />	
+		<link href="css/index.css" rel="stylesheet"/>
+		<link href="css/animate.css" rel="stylesheet"/>
+		<title>集卡攒好运 壕派好礼过新年</title>
+        <style type="text/css"></style>
+	</head>
+	<body>
+		<div class="list">
+        	<div class="page_list">
+            	<div class="listTc">
+                    <!--1.0亲，请登录-->
+                    <div class="listTcIn listTc_01">
+                        <img src="img/tc_bg.png" class="tc_bg"/>
+                        <img src="img/list_btn01.png" class="list_btn01"/>
+                        <input id="text01" type="text" placeholder="请输入移动号码"/>
+                    </div>
+                    <!--2.0亲，你拿到流量了啊-->
+                    <div class="listTcIn listTc_02">
+                        <img src="img/tc_bg03.png" class="tc_bg" style="top: 12%;"/>
+                        <img src="img/ka21.png" class="listTc_02_ka21"/>
+                        <img src="img/close.png" class="listTc_02_close"/>
+                        <div class="listTc_02_ka">好盆友一生一世<br>恭喜获得<span class="listTc_02_ka01">135****5555</span>赠送的<br><span class="listTc_02_ka02">盛世美颜</span>卡一张</div>
+                    </div>
+                    <!--3.0 拿到流量提示回去活动页面-->
+                    <div class="listTcIn listTc_03">
+                        <img src="img/tc_bg.png" class="tc_bg"/>
+                        <a href="https://openauth.alipay.com/oauth2/publicAppAuthorize.htm?app_id=2016041101287271&scope=auth_userinfo&redirect_uri=http://wx.10086.cn/qq/userexperience/blacklist2/getSurprise"><img src="img/btn12.png" class="btnIn"/></a>
+                        <div class="tc_txt">集齐五张新年愿望卡<br>瓜分萌犬大礼包吧！</div>
+                    </div>
+                    <!--4.0 流量被人抽了-->
+                    <div class="listTcIn listTc_04">
+                        <img src="img/tc_bg.png" class="tc_bg"/>
+                        <a href="https://openauth.alipay.com/oauth2/publicAppAuthorize.htm?app_id=2016041101287271&scope=auth_userinfo&redirect_uri=http://wx.10086.cn/qq/userexperience/blacklist2/getSurprise"><img src="img/list_btn04.png" class="btnIn list_btn04"/></a>
+                        <div class="tc_txt">你来晚了<br>错失了好友赠送的卡<br>瓜分流量的路漫漫长啊~</div>
+                    </div>
+                    <!--5.0 你已经瓜分到流量了-->
+                    <div class="listTcIn listTc_05">
+                        <img src="img/tc_bg.png" class="tc_bg"/>
+                        <a href="https://qr.alipay.com/ppx06472p6dkz9fu1ndqr34"><img src="img/btn06.png" class="btnIn"/></a>
+                        <div class="tc_txt">你来晚了<br>新年萌汪都走了</div>
+                    </div>
+                </div>
+            </div>
+		</div>
+        <!--loading开始-->
+        <div id="loading">
+            <div class="cont">
+            	<div class="spinner">
+                    <div class="contIn bounce1"></div>
+                    <div class="contIn bounce2"></div>
+                    <div class="contIn bounce3"></div>
+                </div>
+            </div>
+            <div class="coverDiv"></div>
+        </div>
+	</body>
+	<script src="js/jquery.js"></script>
+	<script src="js/util.js"></script>    
+	<script src="js/main.js"></script>
+	<script src="js/font.js"></script>   
+	<script src="js/ajax_list.js"></script>   
+    <script>
+function ready(callback) {
+  // 如果jsbridge已经注入则直接调用
+  if (window.AlipayJSBridge) {
+    callback && callback();
+  } else {
+		// 如果没有注入则监听注入的事件
+		document.addEventListener('AlipayJSBridgeReady', callback, false);
+	  }
+	}
+	ready(function(e) {
+		AlipayJSBridge.call('hideOptionMenu'); 
+	});
+
+		var isChinaMobile = /^1(3[4-9]|4[7]|5[012789]|7[08]|8[23478])\d{8}$/; 
+		var gMobile;
+    	$(function(){
+			$('.list_btn01').on('touchend', function(e) {
+				var text01=$("#text01").val().trim();
+				if(!isChinaMobile.test(text01)){
+					alert("请输入正确的移动号码！");
+					return;
+				}else{
+					//alert("你输入对了");
+					//输入号码后填入里面
+					gMobile = text01;
+					na(sMobile,cardType,myCode,gMobile);
+				}
+			});
+			
+			//点击回去第三个页面
+			$('.listTc_02_close').on('touchend', function(e) {
+				$('.listTcIn').hide();
+				$('.listTc_03').show();
+            });
+	
+		})
+    </script>
+</html>

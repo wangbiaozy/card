@@ -1,0 +1,95 @@
+* { padding: 0; margin: 0; text-decoration: none;}
+#musicBtn { width: 8.4%; height: auto; position: fixed; right: 3%; top: 3%; z-index: 10;}
+.a_musicBtn { -webkit-animation:musicBtn 1s linear infinite;}
+#container { position: absolute; z-index: 0; margin: 0 auto; overflow: hidden;}
+.page {position: absolute; z-index: 1; background: url(../img/bg.jpg); background-size: 100% 100%;}
+.hide { display: none;}
+
+
+/*page1*/
+.show_txt ,.show_txt03 { width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: 10; display: none;}
+.i11 { width: 12.1%; height: auto; position: absolute; left: 1%; top: 3.2%; z-index: 2; opacity: 1;}
+.i12 { width: 16.8%; height: auto; position: absolute; right: 0; top: 2%; z-index: 2; opacity: 1;}
+.i13 { width: 100%; height: auto; position: absolute; left: 0; top: 0; z-index: 1; opacity: 1;}
+.i14 { width: 50.4%; height: auto; position: absolute; left: 21%; top: 17.3%; z-index: 1; opacity: 1;}
+.i15 { width: 8.4%; height: auto; position: absolute; right: 0; top: 27.5%; z-index: 1; opacity: 1;}
+.i16 { width: 88.7%; height: auto; position: absolute; left: 5.65%; top: 59.8%; z-index: 1; opacity: 1;}
+.i17 { width: 15.3%; height: auto; position: absolute; right: 12%; top: 34%; z-index: 4; opacity: 1; display: none;}
+.btn01,.btn02 { width: 46.8%; height: auto; position: absolute; left: 26.6%; top: 41.9%; z-index: 2; opacity: 1;}
+.btn02 { z-index: 1;}
+.page01_txt01 { width: 100%; height: auto; font-size: 1rem; position: absolute; left: 0; top: 36%; text-align: center; color: #462b0f; z-index: 3;}
+.page01_txt02 { width: 100%; height: auto; font-size: 1rem; position: absolute; left: 0; top: 39.5%; text-align: center; color: #5a1212;}
+.page01_txt02 span { color: #ff1212;}
+.hand { width: 13.2%; height: auto; position: absolute; left: 16.6%; top: 38.8%; z-index: 10; opacity: 1;}
+
+.ka { width: 100%; height: auto; position: absolute; left: 0; top: 47.9%; z-index: 2;}
+.ka li { width: 17.7%; height: auto; float: left; display: inline-block; margin: 0 0 0 2%; position: relative;}
+.yuan { width: 1.4rem; height: 1.4rem; line-height: 1.4rem; text-align: center; color: #ffffff; position: absolute; right: -0.4rem; top: -0.4rem; background: #de3c3c; border-radius: 50%; font-size: 1rem; display: none;}
+.kaImg { width: 100%; height: auto; display: block;}
+
+.ibox { width: 100%; height: auto; position: absolute; left: 0; top: 63.9%; z-index: 2;}
+.iboxIn { width: 40%; height: auto; font-size: 1.2rem; margin: 0 5%; padding: 0.2rem 0; text-align: center; background: #b1b0b0; color: #ffffff; float: left; display: inline-block; border-radius: 5px;}
+.iboxIn_cur { background: #ff5d5d;}
+
+.itox { width: 80%; position: absolute; left: 10%; top: 68%; z-index: 2; border-radius: 5px; border: 2px solid #ff9897;}
+.itoxIn { width: 100%; height: auto; line-height: 1.8rem; font-size: 1.2rem; text-align: center; color: #5a1212; display: none; overflow-x: auto;}
+.itoxInLi { width: 100%; height: auto; float: left;}
+.itox_time { margin: 0 0 0 10%;}
+.itox_cur { display: block;}
+
+/*弹窗*/
+.tc ,.listTc { width: 100%; height: 100%; position: fixed; left: 0; top: 0; background: rgba(0,0,0,0.8); z-index: 99; display: none;}
+.tcIn ,.listTcIn { width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: 2; display: none;}
+.tc_bg { width: 75%; height: auto; position: absolute; left: 12.5%; top: 28%; z-index: 1;}
+.btnIn { width: 52%; height: auto; position: absolute; left: 24%; top: 56%; z-index: 2;}
+.close ,.tc07_close { width: 10%; height: auto; position: absolute; left: 45%; top: 74%; z-index: 2;}
+.tc_txt { width: 70%; height: auto; line-height: 2rem; font-size: 2rem; color: #72501a; position: absolute; top: 38%; left: 15%; z-index: 1; font-weight: bold; text-align: center;}
+.tc_txt_red { width: 70%; height: auto; line-height: 1.5rem; font-size: 1.2rem; color: #ff5756; position: absolute; top: 58%; left: 15%; z-index: 1; font-weight: bold; text-align: center;}
+
+.ka21 { width: 70%; height: auto; position: absolute; left: 15%; top: 18%; z-index: 1;}
+.btn03 { width: 35%; height: auto; left: 32.5%; top: 72%;}
+.tc_bg02 { width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: 1;}
+.guize { width: 58%; position: absolute; left: 21%; top: 29%; z-index: 2; overflow-x: hidden;}
+.guizeIn { width: 100%; height: auto; display: block;}
+.btn04 { top: 67%;}
+.tc ,.tc_08 { display: none;}
+
+.a_hand {
+	-webkit-animation:a_hand 0.6s linear infinite;
+	-webkit-animation-delay:0;
+}
+
+.a_i17 {
+	-webkit-animation:a_i17 1s linear infinite;
+	-webkit-animation-delay:0;
+}
+
+
+.btn07 { width: 52%; height: auto; position: absolute; left: 24%; top: 66%; z-index: 2;}
+.tc07_ka21 { width: 52%; height: auto; position: absolute; left: 24%; top: 17%; z-index: 2;}
+.tc07_ka { width: 100%; height: auto; line-height: 1.8rem; font-size: 1.5rem; color: #5f4113; text-align: center; position: absolute; left: 0; top: 61%; z-index: 2;}
+.tc07_ka01 ,.myPrize ,.myPrize02 { color: #ff3030;}
+.btn11 { width: 34.3%; left: 32.85%; top: 51%;}
+.tc_bg05 { width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: 10; display: block;}
+
+.new .tc07_ka { top: 66%;}
+.new .btn07 { top: 71%;}
+.new .btn03 { top: 77%;}
+
+
+/*第二页的样式*/
+#container { position: absolute; z-index: 0; margin: 0 auto; overflow: hidden;}
+.page_list {position: absolute; z-index: 1; background: url(../img/listBg.jpg); background-size: 100% 100%;}
+.listTc ,.listTc_01 { display: block;}
+.list_btn01 { width: 34.8%; height: auto; position: absolute; left: 32.6%; top: 56%; z-index: 2;}
+#text01 { border: none; background: #ffe9ae; outline:none; width: 50%; position: absolute; top: 40%; left: 25%; z-index: 4; line-height: 3rem; font-size: 1.5rem; text-align: left; color: #7f5526; text-align: center;}
+.listTc_02_ka21 { width: 52%; height: auto; position: absolute; left: 24%; top: 28%; z-index: 2;}
+.listTc_02_ka { width: 100%; height: auto; line-height: 1.8rem; font-size: 1.5rem; color: #5f4113; text-align: center; position: absolute; left: 0; top: 16%; z-index: 2;}
+.listTc_02_close { width: 10%; height: auto; position: absolute; left: 45%; top: 81%; z-index: 2;}
+
+
+
+
+
+
+

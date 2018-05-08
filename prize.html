@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>demo</title>
+</head>
+
+<body>
+    <ul class="box">
+    </ul>
+</body>
+<script src="js/jquery.js"></script>
+<script>
+document.onreadystatechange=ceshi02;//当页面加载状态改变的时候执行这个方法
+
+$(function(){
+	
+})
+
+var myUrl = "http://183.240.150.230:3389/userexperience/blacklist2/"
+function ceshi02(){
+	$.ajax({
+		url:myUrl+'getPrize',
+		type:"get",
+		dataType:'jsonp',
+		success:function(data){
+			console.log(data);
+			/**/$('.box li').remove();
+			for(var i=0;i<data.length;i++){
+				$(".box").prepend("<li>"+data[i].prize+"，数量为"+data[i].total+"</li>");	
+			}
+		}
+	});
+}
+
+
+
+
+</script>
+</html>
